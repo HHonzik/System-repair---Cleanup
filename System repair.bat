@@ -22,7 +22,7 @@ pause >nul
 :admin_get
     echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
     set params = %*:"="
-    echo UAC.ShellExecute "%dir%\FIX WINDOWS.bat", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+    echo UAC.ShellExecute "%dir%\System repair.bat", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
     "%temp%\getadmin.vbs"
     del "%temp%\getadmin.vbs"
     exit /B
